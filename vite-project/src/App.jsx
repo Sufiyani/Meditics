@@ -96,14 +96,14 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Common Components
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Topbar from "./components/Topbar";
+// import Topbar from "./components/Topbar";
 // Pages
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Pages from "./pages/Pages";
 import Blog from "./pages/Blog";
 import ServicesLayout2 from "./pages/ServicesLayout2";
-// import ServicesDetails from "./pages/ServiceDetails";
+import ServicesDetails from "./pages/ServicesDetails";
 function App() {
   return (
     <Router>
@@ -116,7 +116,7 @@ function App() {
           path="/about"
           element={
             <>
-              <Topbar />
+              {/* <Topbar /> */}
               <Navbar />
               <About />
               <Footer />
@@ -127,7 +127,7 @@ function App() {
           path="/pages"
           element={
             <>
-            <Topbar />
+            {/* <Topbar /> */}
               <Navbar />
               <Pages />
               <Footer />
@@ -138,7 +138,7 @@ function App() {
           path="/blog"
           element={
             <>
-            <Topbar />
+            {/* <Topbar /> */}
               <Navbar />
               <Blog />
               <Footer />
@@ -150,7 +150,7 @@ function App() {
           path="/serviceslayout2"
           element={
             <>
-            <Topbar />
+            {/* <Topbar /> */}
               <Navbar />
               <ServicesLayout2 />
               <Footer />
@@ -158,17 +158,17 @@ function App() {
           }
         />  
 
-         {/* <Route
+         <Route
           path="/servicesdetails"
           element={
             <>
-            <Topbar />
+            {/* <Topbar /> */}
               <Navbar />
               <ServicesDetails />
               <Footer />
             </> 
           }
-        />  */}
+        /> 
       </Routes>
     </Router>
   );

@@ -1,21 +1,23 @@
 import React from 'react'
-
+import { ChevronDown, ChevronRight } from 'lucide-react';
+import { Link } from "react-router-dom";
 const ServicesLayout2 = () => {
     return (
 
         <div className="min-h-screen bg-gray-50">
             {/* Header */}
-            <div className="bg-blue-900 text-white py-16 px-4">
+ <div className="bg-[#1A3471] text-white py-20 px-4">
                 <div className="max-w-6xl mx-auto text-center">
-                    <h1 className="text-4xl font-bold mb-4">Services 02</h1>
-                    <div className="text-sm">
-                        <span>Home</span>
-                        <span className="mx-2"></span>
-                        <span>Services 02</span>
+                    <h1 className="text-6xl font-bold mb-4">Services 02</h1>
+                    <div className="flex items-center justify-center text-lg">
+                        <Link to="/" className="white hover:text-blue-600 text-sm">
+                            Home
+                        </Link>
+                        <ChevronRight className="mx-2 w-4 h-4" />
+                        <span className='text-sm'>Service Details</span>
                     </div>
                 </div>
             </div>
-
             {/* Services Grid */}
             <div className="max-w-6xl mx-auto px-4 py-16">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -154,9 +156,9 @@ const ServicesLayout2 = () => {
             </div>
 
             {/* Scrolling Banner */} 
-            <div className="bg-[#DBE9A1] py-4 overflow-hidden">
+            <div className="bg-[#DBE9A1] py-10 overflow-hidden">
                 <div className="whitespace-nowrap animate-scroll">
-                    <div className="inline-flex items-center space-x-8 text-black font-bold text-2xl">
+                    <div className="inline-flex items-center space-x-8 text-black font-bold text-5xl">
                         <span className="flex items-center">
                             <span className="text-black mr-2">★
                             </span> ORTHOPEDICS

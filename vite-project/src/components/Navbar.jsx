@@ -1,230 +1,181 @@
-// // import { Heart, Users } from "lucide-react";
-
-// // export default function Navbar() {
-// //   return (
-// //     <div>
-   
-// //       {/* 🔹 Main Navbar */}
-// //       <nav className="bg-white shadow-sm px-4 py-3">
-// //         <div className="max-w-7xl mx-auto flex items-center justify-between">
-// //           {/* Logo */}
-// //           <div className="flex items-center space-x-2">
-// //             <Heart className="h-8 w-8 text-blue-500" />
-// //             <span className="text-xl font-bold text-gray-800">Medilics</span>
-// //           </div>
-
-// //           {/* Menu Links */}
-// //           <div className="hidden md:flex items-center space-x-8">
-// //             <a href="/" className="text-gray-700 hover:text-blue-600">HOME</a>
-// //             <a href="/about" className="text-gray-700 hover:text-blue-600">ABOUT</a>
-// //             <a href="/services" className="text-gray-700 hover:text-blue-600">SERVICES</a>
-// //             <a href="/blog" className="text-gray-700 hover:text-blue-600">BLOG</a>
-// //             <a href="/contact" className="text-gray-700 hover:text-blue-600">CONTACT</a>
-// //           </div>
-
-// //           {/* Right Section */}
-// //           <div className="flex items-center space-x-4">
-// //             <div className="hidden md:block">
-// //               <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center">
-// //                 <Users className="h-4 w-4 text-gray-600" />
-// //               </div>
-// //             </div>
-// //            <button className="bg-[#DBE9A1] hover:bg-[#c9d98a] text-gray-800 px-4 py-2 rounded-md text-sm font-medium">
-// //   BOOK APPOINTMENT
-// // </button>
-
-// //           </div>
-// //         </div>
-// //       </nav>
-// //     </div>
-// //   );
-// // }
-
-
-
-// import { NavLink } from "react-router-dom";
-// import { Heart, Users } from "lucide-react";
-
-// export default function Navbar() {
-//   const linkClass = ({ isActive }) =>
-//     isActive
-//       ? "text-blue-500 font-semibold border-b-2 border-blue-500 pb-1"
-//       : "text-gray-700 hover:text-blue-500";
-
-//   return (
-//     <div>
-//       {/* 🔹 Main Navbar */}
-//       <nav className="bg-white shadow-sm px-4 py-3">
-//         <div className="max-w-7xl mx-auto flex items-center justify-between">
-//           {/* Logo */}
-//           <div className="flex items-center space-x-2">
-//             <Heart className="h-8 w-8 text-blue-500" />
-//             <span className="text-xl font-bold text-gray-800">Medilics</span>
-//           </div>
-
-//           {/* Menu Links */}
-//           <div className="hidden md:flex items-center space-x-8">
-//             <NavLink to="/" className={linkClass}>HOME</NavLink>
-//             <NavLink to="/about" className={linkClass}>ABOUT</NavLink>
-
-//             {/* 🔹 Services Dropdown */}
-//             <div className="relative group">
-//               <NavLink to="/services" className={linkClass}>
-//                 SERVICES
-//               </NavLink>
-//               <div className="absolute left-0 hidden group-hover:block bg-white shadow-md rounded mt-2 w-48">
-//                 <NavLink to="/services/layout2" className="block px-4 py-2 text-gray-700 hover:text-blue-500">Services Layout 2</NavLink>
-//                 <NavLink to="/services/details" className="block px-4 py-2 text-gray-700 hover:text-blue-500">Services Details</NavLink>
-//               </div>
-//             </div>
-
-//             {/* 🔹 Pages Dropdown */}
-//             <div className="relative group">
-//               <NavLink to="/pages" className={linkClass}>
-//                 PAGES
-//               </NavLink>
-//               <div className="absolute left-0 hidden group-hover:block bg-white shadow-md rounded mt-2 w-48">
-//                 <NavLink to="/pages/team" className="block px-4 py-2 text-gray-700 hover:text-blue-500">Team</NavLink>
-//                 <NavLink to="/pages/team-details" className="block px-4 py-2 text-gray-700 hover:text-blue-500">Team Details</NavLink>
-//               </div>
-//             </div>
-
-//             <NavLink to="/blog" className={linkClass}>BLOG</NavLink>
-//             <NavLink to="/contact" className={linkClass}>CONTACT</NavLink>
-//           </div>
-
-//           {/* Right Section */}
-//           <div className="flex items-center space-x-4">
-//             <div className="hidden md:block">
-//               <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center">
-//                 <Users className="h-4 w-4 text-gray-600" />
-//               </div>
-//             </div>
-//             <button className="bg-[#DBE9A1] hover:bg-[#c9d98a] text-gray-800 px-4 py-2 rounded-md text-sm font-medium">
-//               BOOK APPOINTMENT
-//             </button>
-//           </div>
-//         </div>
-//       </nav>
-//     </div>
-//   );
-// }
-
-
-
-import { NavLink } from "react-router-dom";
-import { Heart, Users, ChevronDown } from "lucide-react";
-import { useState } from "react";
+import React, { useState } from "react";
+import { Clock, Mail, Phone, ChevronDown, Search, Menu } from "lucide-react";
+import { Link, NavLink } from "react-router-dom"; // ✅ React Router Link import
 
 export default function Navbar() {
-  const linkClass = ({ isActive }) =>
-    isActive
-      ? "text-blue-500 font-semibold border-b-2 border-blue-500 pb-1"
-      : "text-gray-700 hover:text-blue-500";
+    const [servicesOpen, setServicesOpen] = useState(false);
+    const [pagesOpen, setPagesOpen] = useState(false);
+    const [blogOpen, setBlogOpen] = useState(false);
 
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const [pagesOpen, setPagesOpen] = useState(false);
+    const activeClass = "text-blue-600 font-semibold";
+    const normalClass = "text-gray-800 hover:text-blue-600";
 
-  return (
-    <div>
-      {/* 🔹 Main Navbar */}
-      <nav className="bg-white shadow-sm px-4 py-3">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <Heart className="h-8 w-8 text-blue-500" />
-            <span className="text-xl font-bold text-gray-800">Medilics</span>
-          </div>
-
-          {/* Menu Links */}
-          <div className="hidden md:flex items-center space-x-8">
-            <NavLink to="/" className={linkClass}>HOME</NavLink>
-            <NavLink to="/about" className={linkClass}>ABOUT</NavLink>
-
-            {/* 🔹 Services Dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => setServicesOpen(!servicesOpen)}
-                className="flex items-center space-x-1 text-gray-700 hover:text-blue-500"
-              >
-                <span>SERVICES</span>
-                <ChevronDown
-                  className={`w-4 h-4 transition-transform duration-200 ${
-                    servicesOpen ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
-              {servicesOpen && (
-                <div className="absolute left-0 bg-white shadow-md rounded mt-2 w-48 z-50">
-                  <NavLink
-                    to="/serviceslayout2"
-                    className="block px-4 py-2 text-gray-700 hover:text-blue-500"
-                    onClick={() => setServicesOpen(false)}
-                  >
-                    Services Layout 2
-                  </NavLink>
-                  <NavLink
-                    to="/services/details"
-                    className="block px-4 py-2 text-gray-700 hover:text-blue-500"
-                    onClick={() => setServicesOpen(false)}
-                  >
-                    Services Details
-                  </NavLink>
+    return (
+        <header className="w-full">
+            {/* 🔹 Top Info Bar */}
+            <div className="bg-blue-900 text-white text-sm py-2">
+                <div className="max-w-7xl mx-auto flex items-center justify-between px-4">
+                    <div className="flex items-center space-x-2">
+                        <Clock className="w-4 h-4 text-white" />
+                        <span>Mon - Fri 8.00 am - 6.00 pm</span>
+                    </div>
+                    <div className="hidden md:block">
+                        <span>Welcome Mediket hospital and doctors appointment services</span>
+                    </div>
+                    <div className="flex items-center space-x-6">
+                        <div className="flex items-center space-x-1">
+                            <Mail className="w-4 h-4 text-green-400" />
+                            <span>info@example.com</span>
+                        </div>
+                        <div className="flex items-center space-x-1">
+                            <Phone className="w-4 h-4 text-yellow-300" />
+                            <span>+208-6666-0112</span>
+                        </div>
+                    </div>
                 </div>
-              )}
             </div>
 
-            {/* 🔹 Pages Dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => setPagesOpen(!pagesOpen)}
-                className="flex items-center space-x-1 text-gray-700 hover:text-blue-500"
-              >
-                <span>PAGES</span>
-                <ChevronDown
-                  className={`w-4 h-4 transition-transform duration-200 ${
-                    pagesOpen ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
-              {pagesOpen && (
-                <div className="absolute left-0 bg-white shadow-md rounded mt-2 w-48 z-50">
-                  <NavLink
-                    to="/pages/team"
-                    className="block px-4 py-2 text-gray-700 hover:text-blue-500"
-                    onClick={() => setPagesOpen(false)}
-                  >
-                    Team
-                  </NavLink>
-                  <NavLink
-                    to="/pages/team-details"
-                    className="block px-4 py-2 text-gray-700 hover:text-blue-500"
-                    onClick={() => setPagesOpen(false)}
-                  >
-                    Team Details
-                  </NavLink>
+            {/* 🔹 Main Navbar */}
+            <div className="flex w-full">
+                <div className="bg-blue-600 px-6 py-4 flex items-center space-x-2">
+                    <img 
+                        src="/images/logo-white.svg"
+                        alt="Logo"
+                        className="h-10 w-auto object-contain"
+                    />
                 </div>
-              )}
-            </div>
 
-            <NavLink to="/blog" className={linkClass}>BLOG</NavLink>
-            <NavLink to="/contact" className={linkClass}>CONTACT</NavLink>
-          </div>
+                <div className="flex-1 bg-white px-8 py-4 flex items-center space-x-8">
+                    {/* HOME */}
+                    <NavLink 
+                        to="/"
+                        className={({ isActive }) => isActive ? activeClass : normalClass}
+                    >
+                        HOME
+                    </NavLink>
 
-          {/* Right Section */}
-          <div className="flex items-center space-x-4">
-            <div className="hidden md:block">
-              <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center">
-                <Users className="h-4 w-4 text-gray-600" />
-              </div>
+                    {/* ABOUT */}
+                    <NavLink 
+                        to="/about"
+                        className={({ isActive }) => isActive ? activeClass : normalClass}
+                    >
+                        ABOUT
+                    </NavLink>
+
+                    {/* SERVICES Dropdown */}
+                    <div className="relative">
+                        <button
+                            onClick={() => setServicesOpen(!servicesOpen)}
+                            className="flex items-center space-x-1 text-gray-800 hover:text-blue-600 font-medium"
+                        >
+                            <span>SERVICES</span>
+                            <ChevronDown
+                                className={`w-4 h-4 transition-transform duration-200 ${servicesOpen ? "rotate-180" : ""}`}
+                            />
+                        </button>
+                        {servicesOpen && (
+                            <div className="absolute left-0 bg-white shadow-lg rounded mt-2 w-48 z-50">
+                                <Link
+                                    to="/serviceslayout2"
+                                    className="block w-full text-left px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                                >
+                                    Services Layout 2
+                                </Link>
+                                <Link
+                                    to="/servicesdetails"
+                                    className="block w-full text-left px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                                >
+                                    Services Details
+                                </Link>
+                            </div>
+                        )}
+                    </div>
+
+                    {/* PAGES Dropdown */}
+                    <div className="relative">
+                        <button
+                            onClick={() => setPagesOpen(!pagesOpen)}
+                            className="flex items-center space-x-1 text-gray-800 hover:text-blue-600 font-medium"
+                        >
+                            <span>PAGES</span>
+                            <ChevronDown
+                                className={`w-4 h-4 transition-transform duration-200 ${pagesOpen ? "rotate-180" : ""}`}
+                            />
+                        </button>
+                        {pagesOpen && (
+                            <div className="absolute left-0 bg-white shadow-lg rounded mt-2 w-48 z-50">
+                                <Link
+                                    to="/pages/team"
+                                    className="block w-full text-left px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                                >
+                                    Team
+                                </Link>
+                                <Link
+                                    to="/pages/team-details"
+                                    className="block w-full text-left px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                                >
+                                    Team Details
+                                </Link>
+                            </div>
+                        )}
+                    </div>
+
+                    {/* BLOG Dropdown */}
+                    <div className="relative">
+                        <button
+                            onClick={() => setBlogOpen(!blogOpen)}
+                            className="flex items-center space-x-1 text-gray-800 hover:text-blue-600 font-medium"
+                        >
+                            <span>BLOG</span>
+                            <ChevronDown
+                                className={`w-4 h-4 transition-transform duration-200 ${blogOpen ? "rotate-180" : ""}`}
+                            />
+                        </button>
+                        {blogOpen && (
+                            <div className="absolute left-0 bg-white shadow-lg rounded mt-2 w-48 z-50">
+                                <Link
+                                    to="/blog/grid"
+                                    className="block w-full text-left px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                                >
+                                    Blog Grid
+                                </Link>
+                                <Link
+                                    to="/blog/details"
+                                    className="block w-full text-left px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                                >
+                                    Blog Details
+                                </Link>
+                            </div>
+                        )}
+                    </div>
+
+                    {/* CONTACT */}
+                    <NavLink 
+                        to="/contact"
+                        className={({ isActive }) => isActive ? activeClass : normalClass}
+                    >
+                        CONTACT
+                    </NavLink>
+
+                    {/* Book Appointment Button */}
+                    <Link 
+                        to="/appointment"
+                        className="bg-lime-300 hover:bg-lime-400 text-gray-800 px-6 py-2 rounded font-semibold flex items-center space-x-2 ml-auto"
+                    >
+                        <span>BOOK A APPOINTMENT</span>
+                        <span>↗</span>
+                    </Link>
+                </div>
+
+                <div className="bg-blue-900 px-6 py-4 flex items-center space-x-2">
+                    <button className="p-2 hover:bg-blue-800 rounded">
+                        <Search className="h-5 w-5 text-white" />
+                    </button>
+                    <button className="p-2 hover:bg-blue-800 rounded">
+                        <Menu className="h-5 w-5 text-white" />
+                    </button>
+                </div>
             </div>
-            <button className="bg-[#DBE9A1] hover:bg-[#c9d98a] text-gray-800 px-4 py-2 rounded-md text-sm font-medium">
-              BOOK APPOINTMENT
-            </button>
-          </div>
-        </div>
-      </nav>
-    </div>
-  );
+        </header>
+    );
 }
-

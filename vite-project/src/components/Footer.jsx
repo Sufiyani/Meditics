@@ -203,14 +203,14 @@ const Footer = () => {
                                 />
                             </div>
 
-                            <p className="text-gray-300 text-sm leading-relaxed max-w-sm">
+                            <p className="text-gray-300 text-lg leading-relaxed max-w-sm">
                                 It is a long established fact that a reader will be distracted the
                                 readable content of a page when looking at layout.
                             </p>
 
                             {/* Payment Partners */}
                             <div className="space-y-3">
-                                <h3 className="text-base font-semibold">Payment Partners:</h3>
+                                <h3 className="text-base font-semibold text-lg">Payment Partners:</h3>
                                 <div className="flex flex-wrap gap-3">
                                     <div className="bg-white px-3 py-2 rounded flex items-center justify-center">
                                         <img src={"/images/payment-method-1.png"} alt="G Pay" className="h-6 w-auto object-contain" />
@@ -234,10 +234,10 @@ const Footer = () => {
                         {/* Quick Links Section */}
                         <div className="space-y-6">
                             <div>
-                                <h3 className="text-xl font-bold mb-2">Quick Links</h3>
+                                <h3 className="text-2xl font-bold mb-2">Quick Links</h3>
                                 <div className="w-12 h-0.5 bg-blue-400 mb-4"></div>
                             </div>
-                            <nav className="space-y-3 text-sm">
+                            <nav className="space-y-3 text-lg">
                                 <a href="#" className="block text-gray-300 hover:text-white transition-colors">
                                     General Health Check-Ups
                                 </a>
@@ -256,10 +256,10 @@ const Footer = () => {
                         {/* Newsletter Section */}
                         <div className="space-y-6">
                             <div>
-                                <h3 className="text-xl font-bold mb-2">Join The Newsletter</h3>
+                                <h3 className="text-2xl font-bold mb-2">Join The Newsletter</h3>
                                 <div className="w-12 h-0.5 bg-blue-400 mb-4"></div>
                             </div>
-                            <p className="text-gray-300 text-sm leading-relaxed">
+                            <p className="text-gray-300 text-lg leading-relaxed">
                                 Want to be notified about our services? Just sign up and we'll
                                 send you a notification by email.
                             </p>
@@ -268,9 +268,9 @@ const Footer = () => {
                                 <input
                                     type="email"
                                     placeholder="Your Email Address"
-                                    className="flex-1 px-4 py-3 bg-white text-gray-800 placeholder-gray-500 focus:outline-none text-sm"
+                                    className="flex-1 px-4 py-3 bg-white text-gray-800 placeholder-gray-500 focus:outline-none text-md"
                                 />
-                                <button className="bg-blue-600 hover:bg-blue-700 px-6 py-3 font-semibold transition-colors flex items-center gap-2 text-sm">
+                                <button className="bg-blue-600 hover:bg-blue-700 px-6 py-3 font-semibold transition-colors flex items-center gap-2 text-md">
                                     SUBSCRIBE
                                     <ArrowRight size={16} />
                                 </button>
@@ -285,7 +285,7 @@ const Footer = () => {
                 {/* Bottom Footer */}
                 <div className="max-w-7xl mx-auto px-6 py-6">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-                        <div className="text-gray-300">
+                        <div className="text-gray-300 text-lg">
                             © <span className="text-blue-400">Meditics</span> 2025. All Rights Reserved.
                         </div>
 
@@ -305,9 +305,9 @@ const Footer = () => {
                             </div>
                         </div>
 
-                        <div className="flex gap-6 text-gray-300">
-                            <a href="#" className="hover:text-white transition-colors">Terms of use</a>
-                            <a href="#" className="hover:text-white transition-colors">Privacy Environmental Policy</a>
+                        <div className="flex gap-6 text-gray-300 ">
+                            <a href="#" className="hover:text-white transition-colors text-lg">Terms of use</a>
+                            <a href="#" className="hover:text-white transition-colors text-lg">Privacy Environmental Policy</a>
                         </div>
                     </div>
                 </div>
