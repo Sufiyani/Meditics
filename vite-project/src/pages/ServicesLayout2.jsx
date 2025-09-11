@@ -1,218 +1,298 @@
-import React from 'react'
-import { ChevronDown, ChevronRight } from 'lucide-react';
+// import React from 'react'
+// import { ChevronDown, ChevronRight } from 'lucide-react';
+// import { Link } from "react-router-dom";
+// const ServicesLayout2 = () => {
+//     return (
+
+//         <div className="min-h-screen bg-gray-50">
+//             {/* Header */}
+//  <div className="bg-[#1A3471] text-white py-20 px-4">
+//                 <div className="max-w-6xl mx-auto text-center">
+//                     <h1 className="text-6xl font-bold mb-4">Services 02</h1>
+//                     <div className="flex items-center justify-center text-lg">
+//                         <Link to="/" className="white hover:text-blue-600 text-sm">
+//                             Home
+//                         </Link>
+//                         <ChevronRight className="mx-2 w-4 h-4" />
+//                         <span className='text-sm'>Service Details</span>
+//                     </div>
+//                 </div>
+//             </div>
+          
+
+//             <div className="max-w-7xl px-4 py-16  ml-40   ">
+//   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+//     {/* Service Card */}
+//     {[
+//       {
+//         title: "Clinical Pathology",
+//         description: "Clinical pathology involves the analysis of blood, urine, and tissues",
+//         image: "/images/service-1.jpg",
+//       },
+//       {
+//         title: "Histopathology",
+//         description: "Histopathology examines tissue samples under a microscope to detect",
+//         image: "/images/service-2.jpg",
+//       },
+//       {
+//         title: "Biochemistry",
+//         description: "Biochemistry tests measure chemical in blood and body fluids",
+//         image: "/images/service-3.jpg",
+//       },
+//       {
+//         title: "Hematology (Blood Tests)",
+//         description: "Hematology tests analyze blood components to detect anemia, infections",
+//         image: "/images/service-4.jpg",
+//       },
+//       {
+//         title: "Urine & Stool Analysis",
+//         description: "Urine and stool analysis help detect infections, digestive issues",
+//         image: "/images/service-5.jpg",
+//       },
+//       {
+//         title: "Hemoglobin (Hb)",
+//         description: "Hemoglobin (Hb) is a vital protein in red blood cells that carries oxygen",
+//         image: "/images/service-6.jpg",
+//       },
+//     ].map((service, index) => (
+//     //   <div key={index} className="bg-[#F2F2F2] rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+//     //     <div className="relative">
+//     //       <img src={service.image} alt={service.title} className="w-full h-52 object-cover" />
+//     //       <button className="absolute bottom-4 right-4 bg-blue-600 p-2 rounded-full text-white hover:bg-blue-700 transition-colors">
+//     //         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+//     //           <path d="M12.293 3.293a1 1 0 011.414 0L19 8.586a1 1 0 010 1.414l-7 7a1 1 0 01-1.414-1.414L16.586 10H3a1 1 0 110-2h13.586l-4.293-4.293a1 1 0 010-1.414z" />
+//     //         </svg>
+//     //       </button>
+//     //     </div>
+//     //     <div className="p-6">
+//     //       <h3 className="text-lg font-semibold text-gray-800 mb-2 ">{service.title}</h3>
+//     //       <p className="text-gray-600 text-sm">{service.description}</p>
+//     //     </div>
+//     //   </div>
+//     <div key={index} className="bg-[#F2F2F2] rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 h-[360px] flex flex-col">
+//   <div className="relative">
+//     <img src={service.image} alt={service.title} className="w-full h-52 object-cover" />
+//     <button className="absolute bottom-4 right-4 bg-blue-600 p-2 rounded-full text-white hover:bg-blue-700 transition-colors">
+//       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+//         <path d="M12.293 3.293a1 1 0 011.414 0L19 8.586a1 1 0 010 1.414l-7 7a1 1 0 01-1.414-1.414L16.586 10H3a1 1 0 110-2h13.586l-4.293-4.293a1 1 0 010-1.414z" />
+//       </svg>
+//     </button>
+//   </div>
+//   <div className="p-8 flex-1"> {/* Padding increase kiya */}
+//     <h3 className="text-xl font-bold text-black mb-4">{service.title}</h3> {/* Margin bottom bada diya */}
+//     <p className="text-gray-600 text-sm">{service.description}</p>
+//   </div>
+// </div>
+
+//     ))}
+//   </div>
+// </div>
+
+
+//             {/* Scrolling Banner */} 
+//             <div className="bg-[#DBE9A1] py-10 overflow-hidden">
+//                 <div className="whitespace-nowrap animate-scroll">
+//                     <div className="inline-flex items-center space-x-8 text-black font-bold text-5xl">
+//                         <span className="flex items-center">
+//                             <span className="text-black mr-2">★
+//                             </span> ORTHOPEDICS
+//                         </span>
+//                         <span className="flex items-center">
+//                             <span className="text-black mr-2">✚
+//                             </span> NEUROLOGY
+//                         </span>
+//                         <span className="flex items-center">
+//                             <span className="text-black mr-2">★
+//                             </span> ORTHOPEDICS
+//                         </span>
+//                         <span className="flex items-center">
+//                             <span className="text-black mr-2">✚
+//                             </span> DERMATOLOGY
+//                         </span>
+//                         <span className="flex items-center">
+//                             <span className="text-black mr-2">★
+//                             </span>
+//                             DERMATOLOGY
+//                         </span>
+//                         <span className="flex items-center">
+//                             <span className="text-black mr-2">
+//                                 ✚</span>
+//                             ORTHOPEDICS
+//                         </span>
+//                         <span className="flex items-center">
+//                             <span className="text-black mr-2">★
+//                             </span> NEUROLOGY
+//                         </span>
+//                         <span className="flex items-center">
+//                             <span className="text-black mr-2">✚
+//                             </span> ORTHOPEDICS
+//                         </span>
+//                         <span className="flex items-center">
+//                             <span className="text-black mr-2">★
+//                             </span> DERMATOLOGY </span>
+//                         <span className="flex items-center">
+//                             <span className="text-black mr-2">✚
+//                             </span> DERMATOLOGY </span>
+//                         <span className="flex items-center">
+//                             <span className="text-black mr-2">★
+//                             </span> ORTHOPEDICS </span>
+//                         <span className="flex items-center">
+//                             <span className="text-black mr-2">✚</span>
+//                             NEUROLOGY </span>
+//                         <span className="flex items-center">
+//                             <span className="text-black mr-2">★
+//                             </span> ORTHOPEDICS
+//                         </span>
+//                     </div>
+//                 </div>
+//             </div>
+//             <style jsx>{`
+//         @keyframes scroll {
+//           0% {
+//             transform: translateX(100%);
+//           }
+//           100% {
+//             transform: translateX(-100%);
+//           }
+//         }
+        
+//         .animate-scroll {
+//           animation: scroll 50s linear infinite;
+//         }
+//       `}</style>
+//         </div>
+//     );
+// };
+
+
+
+// export default ServicesLayout2
+
+
+
+
+import React from "react";
+import { ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
+
 const ServicesLayout2 = () => {
-    return (
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {/* Header */}
+      <div className="bg-[#1A3471] text-white py-20 px-4">
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">Services 02</h1>
+          <div className="flex items-center justify-center text-sm md:text-lg">
+            <Link to="/" className="hover:text-blue-300">
+              Home
+            </Link>
+            <ChevronRight className="mx-2 w-4 h-4" />
+            <span>Service Details</span>
+          </div>
+        </div>
+      </div>
 
-        <div className="min-h-screen bg-gray-50">
-            {/* Header */}
- <div className="bg-[#1A3471] text-white py-20 px-4">
-                <div className="max-w-6xl mx-auto text-center">
-                    <h1 className="text-6xl font-bold mb-4">Services 02</h1>
-                    <div className="flex items-center justify-center text-lg">
-                        <Link to="/" className="white hover:text-blue-600 text-sm">
-                            Home
-                        </Link>
-                        <ChevronRight className="mx-2 w-4 h-4" />
-                        <span className='text-sm'>Service Details</span>
-                    </div>
+      {/* Services Grid */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {[
+            {
+              title: "Clinical Pathology",
+              description:
+                "Clinical pathology involves the analysis of blood, urine, and tissues",
+              image: "/images/service-1.jpg",
+            },
+            {
+              title: "Histopathology",
+              description:
+                "Histopathology examines tissue samples under a microscope to detect",
+              image: "/images/service-2.jpg",
+            },
+            {
+              title: "Biochemistry",
+              description:
+                "Biochemistry tests measure chemical in blood and body fluids",
+              image: "/images/service-3.jpg",
+            },
+            {
+              title: "Hematology (Blood Tests)",
+              description:
+                "Hematology tests analyze blood components to detect anemia, infections",
+              image: "/images/service-4.jpg",
+            },
+            {
+              title: "Urine & Stool Analysis",
+              description:
+                "Urine and stool analysis help detect infections, digestive issues",
+              image: "/images/service-5.jpg",
+            },
+            {
+              title: "Hemoglobin (Hb)",
+              description:
+                "Hemoglobin (Hb) is a vital protein in red blood cells that carries oxygen",
+              image: "/images/service-6.jpg",
+            },
+          ].map((service, index) => (
+            <div
+              key={index}
+              className="bg-[#F2F2F2] rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 h-[360px] flex flex-col group"
+            >
+              <div className="relative">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-52 object-cover"
+                />
+                {/* Arrow */}
+                <div
+                  className="absolute bottom-4 right-4 flex items-center justify-center 
+                             text-blue-600 transition-all duration-300
+                             group-hover:bg-blue-600 group-hover:text-white 
+                             group-hover:rounded-full group-hover:p-2"
+                >
+                  <svg
+                    className="w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M12.293 3.293a1 1 0 011.414 0L19 8.586a1 1 0 010 1.414l-7 7a1 1 0 01-1.414-1.414L16.586 10H3a1 1 0 110-2h13.586l-4.293-4.293a1 1 0 010-1.414z" />
+                  </svg>
                 </div>
+              </div>
+
+              <div className="p-6 flex-1">
+                <h3 className="text-lg md:text-xl font-bold text-black mb-4">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 text-sm">{service.description}</p>
+              </div>
             </div>
-            {/* Services Grid */}
-            <div className="max-w-6xl mx-auto px-4 py-16">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {/* Clinical Pathology */}
-                    <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <div className="relative">
-                            <img
-                                src="/images/service-1.jpg"
-                                alt="Clinical Pathology"
-                                className="w-full h-48 object-cover"
-                            />
-                            <div className="absolute top-4 right-4 bg-blue-600 text-white p-2 rounded">
-                                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
-                        </div>
-                        <div className="p-6">
-                            <h3 className="text-xl font-bold mb-3 text-gray-800">Clinical Pathology</h3>
-                            <p className="text-gray-600 text-sm leading-relaxed">
-                                Clinical pathology involves the analysis of blood, urine, and other...
-                            </p>
-                        </div>
-                    </div>
+          ))}
+        </div>
+      </div>
 
-                    {/* Histopathology */}
-                    <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <div className="relative">
-                            <img
-                                src="/images/service-2.jpg"
-                                alt="Histopathology"
-                                className="w-full h-48 object-cover"
-                            />
-                            <div className="absolute top-4 right-4 bg-blue-600 text-white p-2 rounded">
-                                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
-                        </div>
-                        <div className="p-6">
-                            <h3 className="text-xl font-bold mb-3 text-gray-800">Histopathology</h3>
-                            <p className="text-gray-600 text-sm leading-relaxed">
-                                Histopathology is a branch of study that involves the microscopic examination of tissue...
-                            </p>
-                        </div>
-                    </div>
+      {/* Scrolling Banner */}
+      <div className="bg-[#DBE9A1] py-6 md:py-10 overflow-hidden">
+        <div className="whitespace-nowrap animate-scroll">
+          <div className="inline-flex items-center space-x-6 md:space-x-8 text-black font-bold text-2xl md:text-4xl lg:text-5xl">
+            <span className="flex items-center">
+              <span className="mr-2">★</span> ORTHOPEDICS
+            </span>
+            <span className="flex items-center">
+              <span className="mr-2">✚</span> NEUROLOGY
+            </span>
+            <span className="flex items-center">
+              <span className="mr-2">★</span> DERMATOLOGY
+            </span>
+            <span className="flex items-center">
+              <span className="mr-2">✚</span> CARDIOLOGY
+            </span>
+          </div>
+        </div>
+      </div>
 
-                    {/* Biochemistry */}
-                    <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <div className="relative">
-                            <img
-                                src="/images/service-3.jpg"
-                                alt="Biochemistry"
-                                className="w-full h-48 object-cover"
-                            />
-                            <div className="absolute top-4 right-4 bg-blue-600 text-white p-2 rounded">
-                                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
-                        </div>
-                        <div className="p-6">
-                            <h3 className="text-xl font-bold mb-3 text-gray-800">Biochemistry</h3>
-                            <p className="text-gray-600 text-sm leading-relaxed">
-                                Biochemistry uses chemical methods to study and solve issues...
-                            </p>
-                        </div>
-                    </div>
-
-                    {/* Hematology (Blood Tests) */}
-                    <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <div className="relative">
-                            <img
-                                src="/images/service-4.jpg"
-                                alt="Hematology"
-                                className="w-full h-48 object-cover"
-                            />
-                            <div className="absolute top-4 right-4 bg-blue-600 text-white p-2 rounded">
-                                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
-                        </div>
-                        <div className="p-6">
-                            <h3 className="text-xl font-bold mb-3 text-gray-800">Hematology (Blood Tests)</h3>
-                            <p className="text-gray-600 text-sm leading-relaxed">
-                                Hematology tests analyze blood components to detect diseases, infections...
-                            </p>
-                        </div>
-                    </div>
-
-                    {/* Urine & Stool Analysis */}
-                    <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <div className="relative">
-                            <img
-                                src="/images/service-5.jpg"
-                                alt="Urine & Stool Analysis"
-                                className="w-full h-48 object-cover"
-                            />
-                            <div className="absolute top-4 right-4 bg-blue-600 text-white p-2 rounded">
-                                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
-                        </div>
-                        <div className="p-6">
-                            <h3 className="text-xl font-bold mb-3 text-gray-800">Urine & Stool Analysis</h3>
-                            <p className="text-gray-600 text-sm leading-relaxed">
-                                Urine and stool analysis help detect infections, digestive issues, kidney problems...
-                            </p>
-                        </div>
-                    </div>
-
-                    {/* Hemoglobin (Hb) */}
-                    <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <div className="relative">
-                            <img
-                                src="/images/service-6.jpg"
-                                alt="Hemoglobin"
-                                className="w-full h-48 object-cover"
-                            />
-                            <div className="absolute top-4 right-4 bg-blue-600 text-white p-2 rounded">
-                                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
-                        </div>
-                        <div className="p-6">
-                            <h3 className="text-xl font-bold mb-3 text-gray-800">Hemoglobin (Hb)</h3>
-                            <p className="text-gray-600 text-sm leading-relaxed">
-                                Hemoglobin (Hb) is a vital protein in red blood cells that carries oxygen throughout...
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {/* Scrolling Banner */} 
-            <div className="bg-[#DBE9A1] py-10 overflow-hidden">
-                <div className="whitespace-nowrap animate-scroll">
-                    <div className="inline-flex items-center space-x-8 text-black font-bold text-5xl">
-                        <span className="flex items-center">
-                            <span className="text-black mr-2">★
-                            </span> ORTHOPEDICS
-                        </span>
-                        <span className="flex items-center">
-                            <span className="text-black mr-2">✚
-                            </span> NEUROLOGY
-                        </span>
-                        <span className="flex items-center">
-                            <span className="text-black mr-2">★
-                            </span> ORTHOPEDICS
-                        </span>
-                        <span className="flex items-center">
-                            <span className="text-black mr-2">✚
-                            </span> DERMATOLOGY
-                        </span>
-                        <span className="flex items-center">
-                            <span className="text-black mr-2">★
-                            </span>
-                            DERMATOLOGY
-                        </span>
-                        <span className="flex items-center">
-                            <span className="text-black mr-2">
-                                ✚</span>
-                            ORTHOPEDICS
-                        </span>
-                        <span className="flex items-center">
-                            <span className="text-black mr-2">★
-                            </span> NEUROLOGY
-                        </span>
-                        <span className="flex items-center">
-                            <span className="text-black mr-2">✚
-                            </span> ORTHOPEDICS
-                        </span>
-                        <span className="flex items-center">
-                            <span className="text-black mr-2">★
-                            </span> DERMATOLOGY </span>
-                        <span className="flex items-center">
-                            <span className="text-black mr-2">✚
-                            </span> DERMATOLOGY </span>
-                        <span className="flex items-center">
-                            <span className="text-black mr-2">★
-                            </span> ORTHOPEDICS </span>
-                        <span className="flex items-center">
-                            <span className="text-black mr-2">✚</span>
-                            NEUROLOGY </span>
-                        <span className="flex items-center">
-                            <span className="text-black mr-2">★
-                            </span> ORTHOPEDICS
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <style jsx>{`
+      {/* Scrolling Animation */}
+      <style jsx>{`
         @keyframes scroll {
           0% {
             transform: translateX(100%);
@@ -221,15 +301,13 @@ const ServicesLayout2 = () => {
             transform: translateX(-100%);
           }
         }
-        
+
         .animate-scroll {
-          animation: scroll 50s linear infinite;
+          animation: scroll 40s linear infinite;
         }
       `}</style>
-        </div>
-    );
+    </div>
+  );
 };
 
-
-
-export default ServicesLayout2
+export default ServicesLayout2;
