@@ -101,9 +101,11 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Pages from "./pages/Pages";
+import PagesTeamDetails from "./pages/PagesTeamDetails";
 import Blog from "./pages/Blog";
 import ServicesLayout2 from "./pages/ServicesLayout2";
 import ServicesDetails from "./pages/ServicesDetails";
+import Contact from "./pages/Contact";
 function App() {
   return (
     <Router>
@@ -130,6 +132,17 @@ function App() {
             {/* <Topbar /> */}
               <Navbar />
               <Pages />
+              <Footer />
+            </>
+          }
+        />
+         <Route
+          path="/pages/team-details"
+          element={
+            <>
+            {/* <Topbar /> */}
+              <Navbar />
+              <PagesTeamDetails />
               <Footer />
             </>
           }
@@ -169,6 +182,18 @@ function App() {
             </> 
           }
         /> 
+
+        <Route
+          path="/contact"
+          element={
+            <>
+            {/* <Topbar /> */}
+              <Navbar />
+              <Contact />
+              <Footer />
+            </>
+          }
+        />  
       </Routes>
     </Router>
   );

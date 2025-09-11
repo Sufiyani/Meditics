@@ -272,10 +272,22 @@ const ServicesLayout2 = () => {
       </div>
 
       {/* Scrolling Banner */}
-      <div className="bg-[#DBE9A1] py-6 md:py-10 overflow-hidden">
+      <div className="bg-[#DBE9A1] py-6 md:py-8 overflow-hidden">
         <div className="whitespace-nowrap animate-scroll">
-          <div className="inline-flex items-center space-x-6 md:space-x-8 text-black font-bold text-2xl md:text-4xl lg:text-5xl">
+          <div className="inline-flex items-center space-x-6 md:space-x-8 text-black font-bold text-2xl md:text-4xl lg:text-4xl">
             <span className="flex items-center">
+              <span className="mr-2">★</span> ORTHOPEDICS
+            </span>
+            <span className="flex items-center">
+              <span className="mr-2">✚</span> NEUROLOGY
+            </span>
+            <span className="flex items-center">
+              <span className="mr-2">★</span> DERMATOLOGY
+            </span>
+            <span className="flex items-center">
+              <span className="mr-2">✚</span> CARDIOLOGY
+            </span>
+             <span className="flex items-center">
               <span className="mr-2">★</span> ORTHOPEDICS
             </span>
             <span className="flex items-center">

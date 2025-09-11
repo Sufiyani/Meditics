@@ -730,32 +730,35 @@ const ServicesDetails = () => {
 
                     {/* Right Sidebar */}
                     <div className="lg:w-1/3 w-full">
-                        {/* Our Services */}
-                        <div className="bg-[#F2F2F2] shadow-md p-4 sm:p-6 mb-8">
-                            <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">Our Services</h3>
-                            <div className="space-y-2 text-sm sm:text-base">
-                                {[
-                                    "General Health Consultation",
-                                    "Chronic Disease Management",
-                                    "Online Video Consultation",
-                                    "Preventive Health Checkups",
-                                    "Women's & Men's Health",
-                                    "Family Health Services"
-                                ].map((service, i) => (
-                                    <div
-                                        key={i}
-                                        className={`flex items-center justify-between p-2 rounded cursor-pointer transition ${
-                                            i === 0
-                                                ? "bg-blue-500 text-white"
-                                                : "hover:bg-blue-500 hover:text-white text-black"
-                                        }`}
-                                    >
-                                        <span>{service}</span>
-                                        <span>↗</span>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
+            
+                      {/* Our Services */}
+<div className="bg-[#F2F2F2] shadow-md p-4 sm:p-6 mb-8">
+  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">Our Services</h3>
+  <div className="space-y-2 text-sm sm:text-base">
+    {[
+      { name: "General Health Consultation", link: "/servicesdetails" },
+      { name: "Chronic Disease Management", link: "/servicesdetails" },
+      { name: "Online Video Consultation", link: "/servicesdetails" },
+      { name: "Preventive Health Checkups", link: "/servicesdetails" },
+      { name: "Women's & Men's Health", link: "/servicesdetails" },
+      { name: "Family Health Services", link: "/servicesdetails" },
+    ].map((service, i) => (
+      <Link
+        key={i}
+        to={service.link}
+        className={`flex items-center justify-between p-2 rounded cursor-pointer transition ${
+          i === 0
+            ? "bg-blue-500 text-white"
+            : "hover:bg-blue-500 hover:text-white text-black"
+        }`}
+      >
+        <span>{service.name}</span>
+        <span>↗</span>
+      </Link>
+    ))}
+  </div>
+</div>
+
 
                         {/* Contact Card */}
                         <div className="bg-[#2C509A] text-white rounded-lg p-6 sm:p-8">
