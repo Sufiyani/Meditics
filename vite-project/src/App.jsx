@@ -148,7 +148,7 @@ function App() {
           }
         />
         <Route
-          path="/blog"
+          path="/blogslayout2"
           element={
             <>
             {/* <Topbar /> */}

@@ -242,7 +242,7 @@
 //             {/* Main Navbar */}
 //             <div className="flex w-full bg-white">
 //                {/* Logo Section */}
-// <div className="bg-blue-600 flex items-center justify-center px-16 py-6">
+// <div className="bg-blue-600 flex items-center justify-center px-16 py-4">
 
 //                      <img
 //                          src="/images/logo-white.svg"
@@ -255,7 +255,7 @@
 
 
 //                 {/* Navigation Links */}
-//                 <div className="flex-1 bg-white px-8 py-6 flex items-center justify-between">
+//                 <div className="flex-1 bg-white px-8 py-4 flex items-center justify-between">
 //                     <nav className="flex items-center space-x-8">
 //                         {/* HOME */}
 //                         <NavLink
@@ -392,7 +392,7 @@
 //                 </div>
 
 //                 {/* Right Action Buttons */}
-//                 <div className="bg-[#091C33] flex items-center space-x-3 px-24 py-6">
+//                 <div className="bg-[#091C33] flex items-center space-x-3 px-24 py-4">
 //                     <button 
 //                         className="p-3 bg-[#1C2E43] hover:bg-blue-700 rounded-md transition-colors duration-200 -translate-x-12"
 //                         onClick={() => console.log('Search clicked')}
@@ -465,7 +465,7 @@
 //             {/* Main Navbar */}
 //             <div className="flex w-full bg-white">
 //                 {/* Logo Section */}
-//                 <div className="bg-blue-600 flex items-center justify-center px-16 py-6">
+//                 <div className="bg-blue-600 flex items-center justify-center px-16 py-4">
 //                     <img
 //                         src="/images/logo-white.svg"
 //                         alt="Logo"
@@ -474,7 +474,7 @@
 //                 </div>
 
 //                 {/* Navigation Links */}
-//                 <div className="flex-1 bg-white px-8 py-6 flex items-center justify-between">
+//                 <div className="flex-1 bg-white px-8 py-4 flex items-center justify-between">
 //                     <nav className="flex items-center space-x-8">
 //                         {/* HOME */}
 //                         <NavLink
@@ -611,7 +611,7 @@
 //                 </div>
 
 //                 {/* Right Action Buttons */}
-//                 <div className="bg-[#091C33] flex items-center space-x-3 px-24 py-6">
+//                 <div className="bg-[#091C33] flex items-center space-x-3 px-24 py-4">
 //                     <button 
 //                         className="p-3 bg-[#1C2E43] hover:bg-blue-700 rounded-md transition-colors duration-200 -translate-x-12"
 //                         onClick={() => console.log('Search clicked')}
@@ -688,7 +688,7 @@
 //             {/* Main Navbar */}
 //             <div className="flex w-full bg-white relative">
 //                 {/* Logo Section */}
-//                 <div className="bg-blue-600 flex items-center justify-center px-4 sm:px-8 lg:px-16 py-4 lg:py-6">
+//                 <div className="bg-blue-600 flex items-center justify-center px-4 sm:px-8 lg:px-16 py-4 lg:py-4">
 //                     <img
 //                         src="/images/logo-white.svg"
 //                         alt="Logo"
@@ -697,7 +697,7 @@
 //                 </div>
 
 //                 {/* Desktop Navigation */}
-//                 <div className="hidden lg:flex flex-1 bg-white px-8 py-6 items-center justify-between">
+//                 <div className="hidden lg:flex flex-1 bg-white px-8 py-4 items-center justify-between">
 //                     <nav className="flex items-center space-x-6 xl:space-x-8">
 //                         {/* HOME */}
 //                         <a
@@ -845,7 +845,7 @@
 //                 </div>
 
 //                 {/* Right Action Buttons - Desktop Only */}
-//                 <div className="hidden lg:flex bg-[#091C33] items-center space-x-3 px-8 xl:px-24 py-6">
+//                 <div className="hidden lg:flex bg-[#091C33] items-center space-x-3 px-8 xl:px-24 py-4">
 //                     <button 
 //                         className="p-3 bg-[#1C2E43] hover:bg-blue-700 rounded-md transition-colors duration-200"
 //                         onClick={() => console.log('Search clicked')}
@@ -1119,14 +1119,14 @@ export default function Navbar() {
       {/* Main Navbar */}
       <div className="flex w-full bg-white relative">
         {/* Logo Section */}
-        <div className="bg-blue-600 flex items-center justify-center px-4 sm:px-8 lg:px-16 py-4 lg:py-6">
+        <div className="bg-blue-600 flex items-center justify-center px-4 sm:px-8 lg:px-22 py-4 lg:py-4">
           <Link to="/">
             <img src="/images/logo-white.svg" alt="Logo" className="h-5 lg:h-6 w-auto object-contain" />
           </Link>
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex flex-1 bg-white px-8 py-6 items-center justify-between">
+        <div className="hidden lg:flex flex-1 bg-white px-8 py-4 items-center justify-between">
           <nav className="flex items-center space-x-6 xl:space-x-8">
             {/* HOME */}
             <Link
@@ -1228,17 +1228,12 @@ export default function Navbar() {
               {blogOpen && (
                 <div className="absolute top-full left-0 bg-white shadow-lg rounded-lg mt-2 w-48 z-50 border border-gray-100">
                   <Link
-                    to="/blog/grid"
+                    to="/blogslayout2"
                     className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 text-sm font-medium"
                   >
-                    Blog Grid
+                    Blogs Layout2
                   </Link>
-                  <Link
-                    to="/blog/details"
-                    className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 text-sm font-medium"
-                  >
-                    Blog Details
-                  </Link>
+                 
                 </div>
               )}
             </div>
@@ -1274,7 +1269,7 @@ export default function Navbar() {
         </div>
 
         {/* Right Action Buttons - Desktop Only */}
-        <div className="hidden lg:flex bg-[#091C33] items-center space-x-3 px-8 xl:px-24 py-6">
+        <div className="hidden lg:flex bg-[#091C33] items-center space-x-3 px-8 xl:px-24 py-4">
           <button className="p-3 bg-[#1C2E43] hover:bg-blue-700 rounded-md">
             <Search className="h-5 w-5 text-white" />
           </button>
@@ -1394,19 +1389,13 @@ export default function Navbar() {
                 {blogOpen && (
                   <div className="ml-4 mt-2 space-y-2">
                     <Link
-                      to="/blog/grid"
+                      to="/blogslayout2"
                       onClick={closeMobileMenu}
                       className="block py-2 px-3 text-gray-600 hover:bg-blue-50 hover:text-blue-600 text-sm"
                     >
-                      Blog Grid
+                      Blogs Layout2
                     </Link>
-                    <Link
-                      to="/blog/details"
-                      onClick={closeMobileMenu}
-                      className="block py-2 px-3 text-gray-600 hover:bg-blue-50 hover:text-blue-600 text-sm"
-                    >
-                      Blog Details
-                    </Link>
+                  
                   </div>
                 )}
               </div>
